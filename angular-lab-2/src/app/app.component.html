@@ -1,0 +1,18 @@
+Enter name of the application: <input type="text" [(ngModel)]="title" />
+<p>My Application is {{ title }}</p>
+<p>Number of Players is {{players.length}}</p>
+
+<div>
+  <button [disabled]="disablesNewMessage" (click)="onSendPlayer()">Send Message</button>
+</div>
+
+<p>First Message is from {{players[0].name}: {{players[0].sport]}</p>
+<div>
+  <ul>
+    <li *ngFor="let currentPlayer of players">
+      * {{currentPlayer.name}} ({{currentPlayer.sport}}) 
+      <p *ngIf="currentPlayer.active">is active</p>
+      <p *ngIf="!currentPlayer.active">is not active</p>
+    </li>
+  </ul>
+</div>
