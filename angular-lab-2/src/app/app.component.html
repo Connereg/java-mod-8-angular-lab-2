@@ -16,3 +16,15 @@ Enter name of the application: <input type="text" [(ngModel)]="title" />
     </li>
   </ul>
 </div>
+<h4>New Player Generator</h4>
+<input id="player-name-input" placeholder="Player Name" [(ngModel)]="senderName">
+<input id="player-sport-input" placeholder="Player Sport" [(ngModel)]="senderSport">
+<select name="active" id="active-toggle" [(ngModel)]="senderActiveStatus">
+  <option value=true>active</option>
+  <option value=false>inactive</option>
+</select>
+<div>
+  <button type="button" (click)="onSendPlayer()">Save Player</button>
+</div>
+
+

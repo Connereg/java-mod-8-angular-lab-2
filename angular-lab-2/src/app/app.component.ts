@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'The best Sports App Ever!';
+  senderName = '';
+  senderSport = '';
+  senderActiveStatus = false
+
   disablesNewMessage = true;
   players = [
     {
@@ -28,9 +32,9 @@ export class AppComponent {
 
   onSendPlayer() {
     let newPlayer = {
-      name: "Mica",
-      sport: "Darg Racing",
-      active: true
+      name: this.senderName,
+      sport: this.senderSport,
+      active: this.senderActiveStatus
     }
     this.players.push(newPlayer);
   }
